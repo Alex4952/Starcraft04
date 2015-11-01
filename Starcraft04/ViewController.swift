@@ -8,18 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+	
+	var unitCode : Int = 101
+
+	func gameStart() {
+//		var terranUnits: Array<TerranUnit> = Array()
+		var terranUnits = [TerranUnit]()
+		
+		let marine1 = Marine(unitCode: unitCode++, strength: 10)
+		terranUnits.append(marine1)
+		
+		let firebat1 = Firebat(unitCode: unitCode++, strength: 15)
+		terranUnits.append(firebat1)
+		
+		for unit in terranUnits {
+			unit.attack()
+		}
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		print("+++++ Game Start +++++")
+		gameStart()
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
-
+	
 }
 

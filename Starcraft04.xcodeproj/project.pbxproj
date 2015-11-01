@@ -14,6 +14,7 @@
 		FA70B7731BE59EBA009B796C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA70B7711BE59EBA009B796C /* LaunchScreen.storyboard */; };
 		FA70B77E1BE59EBA009B796C /* Starcraft04Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70B77D1BE59EBA009B796C /* Starcraft04Tests.swift */; };
 		FA70B7891BE59EBA009B796C /* Starcraft04UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70B7881BE59EBA009B796C /* Starcraft04UITests.swift */; };
+		FA70B7971BE59F24009B796C /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70B7961BE59F24009B796C /* Unit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FA70B7841BE59EBA009B796C /* Starcraft04UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Starcraft04UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA70B7881BE59EBA009B796C /* Starcraft04UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starcraft04UITests.swift; sourceTree = "<group>"; };
 		FA70B78A1BE59EBA009B796C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA70B7961BE59F24009B796C /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				FA70B76F1BE59EBA009B796C /* Assets.xcassets */,
 				FA70B7711BE59EBA009B796C /* LaunchScreen.storyboard */,
 				FA70B7741BE59EBA009B796C /* Info.plist */,
+				FA70B7961BE59F24009B796C /* Unit.swift */,
 			);
 			path = Starcraft04;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA70B76B1BE59EBA009B796C /* ViewController.swift in Sources */,
+				FA70B7971BE59F24009B796C /* Unit.swift in Sources */,
 				FA70B7691BE59EBA009B796C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
