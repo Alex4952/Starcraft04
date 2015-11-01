@@ -14,6 +14,10 @@ protocol StarcraftUnit {
 	func attack()
 }
 
+protocol SteamPackDelegate {
+	func attackWithSteamPack(marine: Marine)
+}
+
 class TerranUnit : StarcraftUnit {
 	private let _clan : String = "Terran"
 	private var _strength : Int = 0
@@ -43,6 +47,9 @@ class TerranUnit : StarcraftUnit {
 
 
 class Marine : TerranUnit {
+	
+	var delegate : SteamPackDelegate?
+	
 	private let _name : String = "Marine"
 	var name : String { return _name }
 	
@@ -53,7 +60,7 @@ class Marine : TerranUnit {
 		willSet {
 		}
 		didSet {
-			print("\(displayName)'s SteamPack has turned on.")
+			print("\(displayName)'s SteamPack hs turned on.")
 		}
 	}
 	var displayName : String = ""
@@ -68,11 +75,23 @@ class Marine : TerranUnit {
 	}
 	
 	override func attack() {
-		print("\(displayName) is attacking")
+		if (isSteamPackOn) {
+			print("\(displayName) is attacking")
+		}
+		else {
+			delegate?.attackWithSteamPack(self)
+		}
 	}
 	
 	override func move() {
 		print("\(displayName) is moving")
+	}
+	
+}
+
+class SteamPackAttack : SteamPackDelegate {
+	func attackWithSteamPack(marine: Marine) {
+		print("\(marine.displayName) is attacking with SteamPack!!")
 	}
 }
 
@@ -109,5 +128,4 @@ class Firebat : TerranUnit {
 		print("\(displayName) is moving")
 	}
 }
-
 

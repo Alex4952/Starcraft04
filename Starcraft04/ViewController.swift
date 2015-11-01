@@ -26,6 +26,8 @@ class ViewController: UIViewController {
 		for unit in terranUnits {
 			unit.attack()
 		}
+		
+		marine1.isSteamPackOn = true
 	}
 	
 	override func viewDidLoad() {
